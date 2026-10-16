@@ -1,0 +1,90 @@
+# Turn 1
+continue
+seat 1
+order 1
+cook 1
+# Turn 2
+continue
+wait
+serve 1
+wait
+# Turn 3
+continue
+wait
+wait
+wait
+# Turn 4
+activate
+seat 2
+order 2
+cook 2
+# Turn 5
+continue
+wait
+serve 2
+wait
+# Turn 6
+continue
+wait
+wait
+wait
+# Turn 7
+continue
+seat 3
+order 3
+cook 3
+# Turn 8
+continue
+wait
+wait
+cook 3
+# Turn 9
+continue
+wait
+serve 3
+wait
+# Turn 10
+continue
+seat 4
+order 4
+cook 4
+# Turn 11
+continue
+wait
+wait
+cook 4
+# Turn 12
+continue
+wait
+wait
+cook 4
+# Turn 13
+continue
+seat 5
+serve 4
+wait
+# Turn 14
+continue
+wait
+order 5
+cook 5
+# Turn 15
+continue
+wait
+serve 5
+wait
+# Turn 16
+continue
+seat 6
+order 6
+cook 6
+# Turn 17
+continue
+wait
+wait
+cook 6
+# Turn 18
+continue
+wait
+serve 6
+wait

@@ -1,0 +1,90 @@
+# Turn 1
+continue
+wait
+wait
+wait
+# Turn 2
+continue
+wait
+wait
+wait
+# Turn 3
+continue
+wait
+wait
+wait
+# Turn 4
+continue
+wait
+wait
+wait
+# Turn 5
+continue
+wait
+wait
+wait
+# Turn 6
+continue
+wait
+wait
+wait
+# Turn 7
+continue
+wait
+wait
+wait
+# Turn 8
+continue
+wait
+wait
+wait
+# Turn 9
+continue
+wait
+wait
+wait
+# Turn 10
+continue
+wait
+wait
+wait
+# Turn 11
+continue
+wait
+wait
+wait
+# Turn 12
+continue
+wait
+wait
+wait
+# Turn 13
+continue
+wait
+wait
+wait
+# Turn 14
+continue
+wait
+wait
+wait
+# Turn 15
+continue
+wait
+wait
+wait
+# Turn 16
+continue
+wait
+wait
+wait
+# Turn 17
+continue
+wait
+wait
+wait
+# Turn 18
+continue
+wait
+wait
+wait
