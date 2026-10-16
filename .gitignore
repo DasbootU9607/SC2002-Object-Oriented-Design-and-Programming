@@ -1,0 +1,6 @@
+**/build/
+*.class
+*.docx
+.idea/
+.vscode/
+.DS_Store
