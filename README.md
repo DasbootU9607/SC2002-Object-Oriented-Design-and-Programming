@@ -37,6 +37,31 @@ javac -encoding UTF-8 --release 17 -d build/classes src/restaurantrush/*.java
 java -cp build/classes restaurantrush.Main
 ```
 
+## Console interface
+
+All three stages display a welcome banner, a menu and a short command guide.
+Each turn has separate status, queue, table, active-order, staff-action and
+end-of-turn sections. Commands include descriptions and current target IDs;
+long feedback wraps within a 72-column layout. Finished or cancelled orders
+leave the active-order display, and the closing page shows the final score,
+each guest's final status and a goodbye banner.
+
+Stage 3 also displays Happy Hour availability and remaining duration, and gives
+the Host a separate prompt. The input commands and turn order are unchanged;
+the supplied replay files work without extra menu choices or Enter presses.
+Plain ASCII output needs no terminal colours, screen-clearing support or libraries.
+Use a monospaced terminal font and a window at least 72 columns wide.
+
+`ConsoleUI` parses decisions and calls `GameEngine`; `ConsoleView` renders the
+screens and reads state for display. The view does not change game state or
+decide whether an action is valid. Both classes are included in each stage so
+that all three folders remain independently runnable. This presentation update
+is applied to the working source; the original stage tags remain historical snapshots.
+
+The visual reference is [FYPMS](https://github.com/pufanyi/FYPMS), particularly
+its welcome/exit pages and separators. The Restaurant Rush banners and layout
+are implemented for this game's commands and state.
+
 ## Runnable stages
 
 | Folder | Git tag | Features | Behavioural assertions |
