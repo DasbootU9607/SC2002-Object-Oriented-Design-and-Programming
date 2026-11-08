@@ -4,6 +4,24 @@ An offline Java 17 command-line restaurant management game for SC2002.
 
 Repository: https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming
 
+## Recorded demonstration
+
+**[Download the final demonstration video (MP4)](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4)**
+
+[Video release page](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/tag/demo-video-final) · [Reproducible video resources](video-resources/README.md)
+
+Duration: approximately 14 minutes 42 seconds. Frame rate: 30 fps. Download the video and use the playback times below to locate each segment. The original timecodes use `HH:MM:SS:FF`, where `FF` is the frame number; playback times are rounded to the nearest millisecond.
+
+| Segment | Content | Original timecode | Playback time |
+| --- | --- | --- | --- |
+| 1 | Launching the submitted project | `00:00:08:18` | `00:08.600` |
+| 2 | Manager choices and constrained staff actions | `00:01:30:24` | `01:30.800` |
+| 3 | Dish lifecycle: READY, SERVED and payment | `00:02:57:14` | `02:57.467` |
+| 4 | VIP customer behaviour | `00:04:29:12` | `04:29.400` |
+| 5 | Stage 3 feature: Host responsibilities and implementation | `00:05:31:13` | `05:31.433` |
+| 6 | Reproducible victory and defeat | `00:06:55:17` | `06:55.567` |
+| 7 | Stage tag comparisons, Stage 3 class diagram and Customer 4 sequence diagram | `00:08:54:06` | `08:54.200` |
+
 ## Video reference files
 
 [Open the video reference folder](video-resources/README.md) to find supporting files by video segment, with reproduction commands and expected results. The folder brings together the source code, replay inputs and diagrams demonstrated in the video so the results can be reproduced.
@@ -167,12 +185,6 @@ Sources were compiled with `javac --release 17 -Xlint:all -Werror`.
 Command-line help, invalid arguments and missing replay files were also checked.
 Earlier behaviour is exercised in Stage 3 with the Host waiting and promotion unused.
 
-## Remaining course submission materials
+## Course submission materials
 
-The repository supplies code, runnable stage snapshots, test evidence and source documentation.
-The group still needs to prepare the final UML class and sequence diagrams, PDF report,
-recorded group video, signed original-work declarations, and individual GAI-use declarations.
-
-No video has been recorded. Add the actual video link and segment timestamps here after recording:
-launch; constrained manager choice; READY/SERVED/payment; VIP or Critic; Stage 3 feature;
-victory and defeat; stage comparisons and diagrams.
+The repository provides runnable source, tests, replay inputs, UML diagram references and the recorded demonstration linked above. The course submission also requires the PDF report, signed original-work declarations and individual GAI-use declarations.
