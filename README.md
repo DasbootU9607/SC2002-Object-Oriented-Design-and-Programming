@@ -10,9 +10,9 @@ Play the full demonstration directly in the video player below.
 
 https://github.com/user-attachments/assets/051b23ce-c1b8-4df1-a8a7-d7088484cf6b
 
-[Download the high-quality MP4](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-High-Quality.mp4) · [Original export](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4) · [Reproducible video resources](video-resources/README.md)
+[Download the MP4](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-High-Quality.mp4) · [Original export](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4) · [Reproducible video resources](video-resources/README.md)
 
-Duration: approximately 14 minutes 40 seconds. The player uses the full-length, high-quality version at 1810 × 1080 and 30 fps (95.2 MB), with light sharpening for code and terminal text. Use the player's full-screen control to read small text. The original export is also available without recompression.
+Duration: approximately 14 minutes 40 seconds. 
 
 Segment start times are listed below for reference. Timecodes use `HH:MM:SS:FF` at 30 fps, where `FF` is the frame number.
 
@@ -188,7 +188,3 @@ The Stage 3 suite also checks each victory threshold separately.
 Sources were compiled with `javac --release 17 -Xlint:all -Werror`.
 Command-line help, invalid arguments and missing replay files were also checked.
 Earlier behaviour is exercised in Stage 3 with the Host waiting and promotion unused.
-
-## Course submission materials
-
-The repository provides runnable source, tests, replay inputs, UML diagram references and the recorded demonstration linked above. The course submission also requires the PDF report, signed original-work declarations and individual GAI-use declarations.
