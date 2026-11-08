@@ -6,23 +6,23 @@ Repository: https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Pr
 
 ## Recorded demonstration
 
-**[Watch the demonstration online](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/)**
+Play the full demonstration directly in the video player below.
 
-[Download the MP4](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4)
+https://github.com/user-attachments/assets/45a1620d-9534-41c2-940e-3e1de5dfab6b
 
-[Video release page](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/tag/demo-video-final) · [Reproducible video resources](video-resources/README.md)
+[Download the original MP4](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4) · [Reproducible video resources](video-resources/README.md)
 
-Duration: approximately 14 minutes 42 seconds. Frame rate: 30 fps. Click a playback timestamp below to open the online player at that segment. Select a chapter on the player page to jump while watching. The original timecodes use `HH:MM:SS:FF`, where `FF` is the frame number; playback times are rounded to the nearest millisecond.
+Duration: approximately 14 minutes 42 seconds. The embedded version is compressed for online playback; the download preserves the original video. Segment start times are listed below for reference. Original timecodes use `HH:MM:SS:FF` at 30 fps, where `FF` is the frame number.
 
-| Segment | Content | Original timecode | Playback time |
+| Segment | Content | Original timecode | Start time |
 | --- | --- | --- | --- |
-| 1 | Launching the submitted project | `00:00:08:18` | [00:08.600](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=8.6) |
-| 2 | Manager choices and constrained staff actions | `00:01:30:24` | [01:30.800](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=90.8) |
-| 3 | Dish lifecycle: READY, SERVED and payment | `00:02:57:14` | [02:57.467](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=177.466667) |
-| 4 | VIP customer behaviour | `00:04:29:12` | [04:29.400](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=269.4) |
-| 5 | Stage 3 feature: Host responsibilities and implementation | `00:05:31:13` | [05:31.433](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=331.433333) |
-| 6 | Reproducible victory and defeat | `00:06:55:17` | [06:55.567](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=415.566667) |
-| 7 | Stage tag comparisons, Stage 3 class diagram and Customer 4 sequence diagram | `00:08:54:06` | [08:54.200](https://dasbootu9607.github.io/SC2002-Object-Oriented-Design-and-Programming/?t=534.2) |
+| 1 | Launching the submitted project | `00:00:08:18` | `00:08.600` |
+| 2 | Manager choices and constrained staff actions | `00:01:30:24` | `01:30.800` |
+| 3 | Dish lifecycle: READY, SERVED and payment | `00:02:57:14` | `02:57.467` |
+| 4 | VIP customer behaviour | `00:04:29:12` | `04:29.400` |
+| 5 | Stage 3 feature: Host responsibilities and implementation | `00:05:31:13` | `05:31.433` |
+| 6 | Reproducible victory and defeat | `00:06:55:17` | `06:55.567` |
+| 7 | Stage tag comparisons, Stage 3 class diagram and Customer 4 sequence diagram | `00:08:54:06` | `08:54.200` |
 
 ## Video reference files
 
