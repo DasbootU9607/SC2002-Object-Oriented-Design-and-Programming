@@ -8,21 +8,23 @@ Repository: https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Pr
 
 Play the full demonstration directly in the video player below.
 
-https://github.com/user-attachments/assets/45a1620d-9534-41c2-940e-3e1de5dfab6b
+https://github.com/user-attachments/assets/051b23ce-c1b8-4df1-a8a7-d7088484cf6b
 
-[Download the original MP4](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4) · [Reproducible video resources](video-resources/README.md)
+[Download the high-quality MP4](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-High-Quality.mp4) · [Original export](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-Final.mp4) · [Reproducible video resources](video-resources/README.md)
 
-Duration: approximately 14 minutes 42 seconds. The embedded version is compressed for online playback; the download preserves the original video. Segment start times are listed below for reference. Original timecodes use `HH:MM:SS:FF` at 30 fps, where `FF` is the frame number.
+Duration: approximately 14 minutes 40 seconds. The player uses the full-length, high-quality version at 1810 × 1080 and 30 fps (95.2 MB), with light sharpening for code and terminal text. Use the player's full-screen control to read small text. The original export is also available without recompression.
 
-| Segment | Content | Original timecode | Start time |
+Segment start times are listed below for reference. Timecodes use `HH:MM:SS:FF` at 30 fps, where `FF` is the frame number.
+
+| Segment | Content | Timecode | Start time |
 | --- | --- | --- | --- |
 | 1 | Launching the submitted project | `00:00:08:18` | `00:08.600` |
-| 2 | Manager choices and constrained staff actions | `00:01:30:24` | `01:30.800` |
-| 3 | Dish lifecycle: READY, SERVED and payment | `00:02:57:14` | `02:57.467` |
-| 4 | VIP customer behaviour | `00:04:29:12` | `04:29.400` |
-| 5 | Stage 3 feature: Host responsibilities and implementation | `00:05:31:13` | `05:31.433` |
-| 6 | Reproducible victory and defeat | `00:06:55:17` | `06:55.567` |
-| 7 | Stage tag comparisons, Stage 3 class diagram and Customer 4 sequence diagram | `00:08:54:06` | `08:54.200` |
+| 2 | Manager choices and constrained staff actions | `00:01:28:14` | `01:28.467` |
+| 3 | Dish lifecycle: READY, SERVED and payment | `00:02:55:04` | `02:55.133` |
+| 4 | VIP customer behaviour | `00:04:27:02` | `04:27.067` |
+| 5 | Stage 3 feature: Host responsibilities and implementation | `00:05:29:03` | `05:29.100` |
+| 6 | Reproducible victory and defeat | `00:06:53:07` | `06:53.233` |
+| 7 | Stage tag comparisons, Stage 3 class diagram and Customer 4 sequence diagram | `00:08:51:26` | `08:51.867` |
 
 ## Video reference files
 
