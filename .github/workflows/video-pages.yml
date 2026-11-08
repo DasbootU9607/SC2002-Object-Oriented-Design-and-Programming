@@ -1,0 +1,41 @@
+name: Deploy demonstration player
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/video/**'
+      - '.github/workflows/video-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: video-pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/configure-pages@v5
+      - name: Download the published video
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release download demo-video-final --pattern Demo-Video-Final.mp4 --dir docs/video
+          echo '40671a6836a1e5f3c260a0a15df672b2caef741126ccead5035447d33a78c362  docs/video/Demo-Video-Final.mp4' | sha256sum --check
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: docs/video
+      - name: Deploy GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
