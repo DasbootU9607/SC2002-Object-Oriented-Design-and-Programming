@@ -24,6 +24,6 @@ This is the same turn-13 decision as Segment 2. Customer 4 chooses the Salad and
 
 ![Customer 4 payment and result](sequence-c.png)
 
-Replay inputs: [Strategy A](../../stage-3/examples/victory.txt) and [Strategy B](../inputs/strategy-b.txt). Segment 3 separately demonstrates Customer 1's Burger on turns 1–4; it is not the Customer 4 sequence scenario.
+Replay inputs: [Strategy A](../../stage-3/examples/victory.txt) and [Strategy B](../inputs/strategy-b.txt). Segment 3 demonstrates Customer 1's Burger on turns 1–4.
 
-These images are preserved from the supplied report at their original embedded resolution. The `video-sequence-*` files in this directory belong to the archived turn-16 alternative and are not the diagrams selected for this video.
+The diagrams show the object structure and interactions behind the reproducible demonstrations.

@@ -6,7 +6,7 @@ Repository: https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Pr
 
 ## Video reference files
 
-[Open the video reference folder](video-resources/README.md) to find supporting files by video segment, with reproduction commands and expected results. Segment 2 uses the original turn-13 Strategy A/B comparison. Segment 7 presents the Stage 3 class diagram and the Customer 4 sequence diagram.
+[Open the video reference folder](video-resources/README.md) to find supporting files by video segment, with reproduction commands and expected results. The folder brings together the source code, replay inputs and diagrams demonstrated in the video so the results can be reproduced.
 
 Key reference files and folders:
 

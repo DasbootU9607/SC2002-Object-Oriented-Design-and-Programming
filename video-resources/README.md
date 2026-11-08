@@ -1,22 +1,20 @@
 # Restaurant Rush video reference files
 
-This folder is the single entry point for the submitted video's source code, replay inputs and diagrams. **Segment 2 uses the original turn-13 comparison; the other segments follow the later recording plan.**
-
-本文件夹是视频配套资料统一入口：Segment 2 为旧版第 13 回合“先上菜还是先接单”；其余段落按新版。Segment 7 展示 Stage 3 类图和 Customer 4 的顺序图（分为三张连续图）。下方第 16 回合资料仅作为历史备选保留，不属于本视频的案例。
+This folder contains the source code, replay inputs and diagrams demonstrated in the group video. Each segment is linked to its supporting files below. Download the repository to run the examples and reproduce the recorded results.
 
 ## Quick links by video segment
 
 | Segment | Files to inspect |
 | --- | --- |
 | 1. Launching the project | [Stage 1 instructions](stage-1/README.md), [Windows launcher](stage-1/run.ps1), [Main.java](stage-1/src/restaurantrush/Main.java) |
-| 2. Original turn-13 manager choice | [Strategy A: serve customer 4 first](stage-3/examples/victory.txt), [Strategy B: order for customer 5 first](video-demo/inputs/strategy-b.txt) |
+| 2. Manager choice and staff constraints | [Strategy A: serve customer 4 first](stage-3/examples/victory.txt), [Strategy B: order for customer 5 first](video-demo/inputs/strategy-b.txt) |
 | 3. Customer 1 Burger lifecycle, turns 1–4 | [Replay: first four turns](stage-3/examples/victory.txt), [Order](stage-3/src/restaurantrush/Order.java), [Customer](stage-3/src/restaurantrush/Customer.java), [Waiter](stage-3/src/restaurantrush/Waiter.java), [Chef](stage-3/src/restaurantrush/Chef.java), [Cashier](stage-3/src/restaurantrush/Cashier.java) |
 | 4. Stage 2 VIP behaviour | [Stage 2 replay: turns 4–6](stage-2/examples/victory.txt), [VIPCustomer](stage-2/src/restaurantrush/VIPCustomer.java), [Customer](stage-2/src/restaurantrush/Customer.java) |
 | 5. Host code explanation | [Host.seat](stage-3/src/restaurantrush/Host.java), [GameState.seat](stage-3/src/restaurantrush/GameState.java), [GameEngine.assignHost and assignWaiter](stage-3/src/restaurantrush/GameEngine.java) |
 | 6. Stage 3 victory and defeat | [Victory: also Strategy A](stage-3/examples/victory.txt), [Defeat](stage-3/examples/defeat.txt), [arrival rules](stage-3/src/restaurantrush/GameSetup.java), [meal choices](stage-3/src/restaurantrush/Menu.java), [Critic preference](stage-3/src/restaurantrush/CriticCustomer.java) |
 | 7. Stage 3 class diagram and Customer 4 sequence diagram | [Diagram guide and previews](video-demo/assets/README.md), [class diagram](video-demo/assets/class-diagram.png), Customer 4 sequence parts [A: preparation](video-demo/assets/sequence-a.png), [B: turn-13 decision](video-demo/assets/sequence-b.png), [C: payment and result](video-demo/assets/sequence-c.png) |
 
-## Run the original turn-13 comparison
+## Reproduce the manager decision
 
 Download the repository and open PowerShell **inside this `video-resources` folder**. JDK 17 or newer is required; the application uses only the Java standard library and works offline. Each launcher compiles its own stage before running it.
 
@@ -33,7 +31,7 @@ Set-Location video-resources
 
 The two strategies share turns 1–12. Subsequent assignments also account for table occupancy and staff capacity. They are not complete runs differing in only one command.
 
-| Original scenario | Paid | Served | Revenue | Average paid satisfaction | Result |
+| Scenario | Paid | Served | Revenue | Average paid satisfaction | Result |
 | --- | ---: | ---: | ---: | ---: | --- |
 | Strategy A | 5 | 6 | $72.78 | 85.60 | VICTORY |
 | Strategy B | 5 | 5 | $72.78 | 84.00 | VICTORY |
@@ -70,29 +68,9 @@ On macOS/Linux, replace `.\stage-N\run.ps1` with `sh stage-N/run.sh`, and `.\ver
 
 The Happy Hour input is a feature demonstration, not the victory strategy. Replay files supply ordinary commands through the same ConsoleUI as interactive play; they do not inject results.
 
-## Archived alternative turn-16 scenario — not used in this video
-
-Use these files only if the video shows **two READY meals on turn 16** and compares which customer can pay before closing:
-
-| Input | Paid | Served | Revenue | Average paid satisfaction |
-| --- | ---: | ---: | ---: | ---: |
-| [Combo first](video-demo/inputs/video-main.txt) | 4 | 5 | $63.78 | 80.00 |
-| [Salad first](video-demo/inputs/video-salad-first.txt) | 4 | 5 | $48.48 | 86.00 |
-| [Combo first without promotion](video-demo/inputs/video-no-promotion.txt) | 4 | 5 | $65.40 | 78.75 |
-
-All three produce VICTORY. The service-order branches share turns 1–15; only the Waiter targets on turns 16 and 17 are swapped. Their satisfaction averages cover different sets of paying customers.
-
-```powershell
-.\stage-3\run.ps1 --replay ../video-demo/inputs/video-main.txt
-.\stage-3\run.ps1 --replay ../video-demo/inputs/video-salad-first.txt
-.\stage-3\run.ps1 --replay ../video-demo/inputs/video-no-promotion.txt
-```
-
-Matching sequence diagrams: [preparation](video-demo/assets/video-sequence-1.svg), [service decision](video-demo/assets/video-sequence-2.svg), [payment and result](video-demo/assets/video-sequence-3.svg). PNG copies and [diagram source data](video-demo/assets/video-sequence-source.json) are in the same directory.
-
 ## Interactive replay preparation
 
-The [optional command-copy helper](video-demo/Get-DemoCommands.ps1) copies selected replay turns for interactive demonstration. Run it from this folder. Original report diagrams are preserved at their supplied resolution; the video/report submission is separate from this reference folder.
+The [optional command-copy helper](video-demo/Get-DemoCommands.ps1) copies selected replay turns for interactive demonstration. Run it from this folder. The diagram guide links the Stage 3 class diagram and the Customer 4 sequence diagram.
 
 ## Source and development history
 
@@ -108,7 +86,7 @@ The runnable `stage-1`, `stage-2`, `stage-3` folders and verification scripts ar
 
 The source copies keep this reference folder independently runnable. Development history remains in the repository's original stage paths and tags.
 
-Validation before publication: all 368 regression assertions passed from this folder. All 11 listed complete replays ran to turn 18 with the results shown above. Local Markdown file links and the original script's command-copy helper were also checked.
+The three regression suites pass 368 assertions. The Strategy A/B, Stage 2 and Stage 3 outcome replays were run to completion to verify their results.
 
 ## Folder structure
 
@@ -121,7 +99,7 @@ video-resources/
   video-demo/
     inputs/                   Additional comparison and promotion replays
     assets/README.md          Selected Stage 3 class and Customer 4 sequence diagrams
-    assets/                   Selected diagrams and archived alternative diagrams
+    assets/                   Class and sequence diagrams
     Get-DemoCommands.ps1       Optional interactive command-copy helper
   verify.ps1                  Windows regression-suite launcher
   verify.sh                   macOS/Linux regression-suite launcher
