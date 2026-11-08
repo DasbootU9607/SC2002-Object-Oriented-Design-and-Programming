@@ -1,0 +1,401 @@
+[
+  {
+    "name": "video-sequence-1",
+    "title": "Video route 1  Arrival, ordering and preparation",
+    "subtitle": "Customer 4 | Combo $24.30 | Preparation on turns 10, 11 and 15",
+    "participants": [
+      "ConsoleUI",
+      "GameEngine",
+      "GameState",
+      "Host",
+      "Waiter",
+      "Customer 4",
+      "Chef",
+      "Order 4"
+    ],
+    "rows": [
+      [
+        "band",
+        "Turn 10 | Arrival and independent Host seating"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "startTurn(false)"
+      ],
+      [
+        "msg",
+        1,
+        2,
+        "arrive(customer 4 from GameSetup)"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "assignHost(4)"
+      ],
+      [
+        "msg",
+        1,
+        3,
+        "seat(state, customer 4)"
+      ],
+      [
+        "msg",
+        3,
+        2,
+        "seat(customer 4)"
+      ],
+      [
+        "note",
+        "GameState calls Table.seat(customer 4), which calls Customer.seat()."
+      ],
+      [
+        "band",
+        "Turn 10 | The Waiter can take the order in the same turn"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "assignWaiter(ORDER, 4)"
+      ],
+      [
+        "msg",
+        1,
+        4,
+        "takeOrder(state, customer 4)"
+      ],
+      [
+        "msg",
+        4,
+        5,
+        "chooseMeal(menu): combo"
+      ],
+      [
+        "msg",
+        4,
+        2,
+        "quoteBill(customer 4, combo): 2430 cents"
+      ],
+      [
+        "msg",
+        4,
+        7,
+        "new Order(4, 4, combo, 2430)"
+      ],
+      [
+        "msg",
+        4,
+        2,
+        "addOrder(order 4)"
+      ],
+      [
+        "msg",
+        2,
+        5,
+        "order(): WAITING_FOR_FOOD"
+      ],
+      [
+        "band",
+        "Repeated on turns 10, 11 and 15 | One preparation unit per Chef task"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "assignChef(4)"
+      ],
+      [
+        "msg",
+        1,
+        6,
+        "prepare(order 4)"
+      ],
+      [
+        "msg",
+        6,
+        7,
+        "prepareOneUnit()"
+      ],
+      [
+        "note",
+        "Order 4: 1/3 on turn 10; 2/3 on turn 11; READY 3/3 on turn 15."
+      ],
+      [
+        "note",
+        "Customer 5 orders Salad on turn 13; cook 5 makes Order 5 READY that turn."
+      ],
+      [
+        "note",
+        "Controlled backlog: Chef waits on turns 12 and 14; both meals remain unserved through turn 15."
+      ]
+    ]
+  },
+  {
+    "name": "video-sequence-2",
+    "title": "Video route 2  One Waiter task, two READY meals",
+    "subtitle": "Turn 16 | Same starting state in both branches | Service order is the only branch difference",
+    "participants": [
+      "Manager",
+      "ConsoleUI",
+      "GameEngine",
+      "Waiter",
+      "Order 4",
+      "Customer 4",
+      "Order 5",
+      "Customer 5"
+    ],
+    "rows": [
+      [
+        "band",
+        "Common state | Order 4 READY 3/3, $24.30; Order 5 READY 1/1, $9.00"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "continue; Host wait"
+      ],
+      [
+        "msg",
+        1,
+        2,
+        "startTurn(false); assignHost(0)"
+      ],
+      [
+        "note",
+        "Waiter targets: #4 and #5. Only one successful assignment is allowed in this turn."
+      ],
+      [
+        "band",
+        "alt [Combo first] | Video main route"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "serve 4"
+      ],
+      [
+        "msg",
+        1,
+        2,
+        "assignWaiter(SERVE, 4)"
+      ],
+      [
+        "msg",
+        2,
+        3,
+        "serve(state, customer 4, 16)"
+      ],
+      [
+        "msg",
+        3,
+        4,
+        "serve(): SERVED"
+      ],
+      [
+        "msg",
+        3,
+        5,
+        "serve(16): EATING, satisfaction 52"
+      ],
+      [
+        "note",
+        "Waiter records service via GameState.recordServed(); GameEngine marks its task used."
+      ],
+      [
+        "note",
+        "Turn 17: serve 5 through the same call chain. Customer 5 is served at satisfaction 68."
+      ],
+      [
+        "band",
+        "else [Salad first] | Alternative service order"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "serve 5"
+      ],
+      [
+        "msg",
+        1,
+        2,
+        "assignWaiter(SERVE, 5)"
+      ],
+      [
+        "msg",
+        2,
+        3,
+        "serve(state, customer 5, 16)"
+      ],
+      [
+        "msg",
+        3,
+        6,
+        "serve(): SERVED"
+      ],
+      [
+        "msg",
+        3,
+        7,
+        "serve(16): EATING, satisfaction 76"
+      ],
+      [
+        "note",
+        "Waiter records service via GameState.recordServed(); GameEngine marks its task used."
+      ],
+      [
+        "note",
+        "Turn 17: serve 4 through the same call chain. Customer 4 is served at satisfaction 44."
+      ],
+      [
+        "band",
+        "end alt | Manager, Host and Chef inputs are identical in both branches"
+      ],
+      [
+        "note",
+        "Only Waiter targets on turns 16 and 17 are swapped. All other 70 commands match."
+      ]
+    ]
+  },
+  {
+    "name": "video-sequence-3",
+    "title": "Video route 3  Eating, payment and the closing-time result",
+    "subtitle": "First = the guest served on turn 16 | Second = the guest served on turn 17",
+    "participants": [
+      "UI / View",
+      "GameEngine",
+      "First guest",
+      "Second guest",
+      "Cashier",
+      "GameState",
+      "Order / Table",
+      "GameResult"
+    ],
+    "rows": [
+      [
+        "band",
+        "End of turn 17 | Eating update before automatic payment"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "finishTurn()"
+      ],
+      [
+        "msg",
+        1,
+        2,
+        "finishEating(17): READY_TO_PAY"
+      ],
+      [
+        "msg",
+        1,
+        3,
+        "finishEating(17): false (served this turn)"
+      ],
+      [
+        "msg",
+        1,
+        4,
+        "collectOldestEligible(state, 17)"
+      ],
+      [
+        "msg",
+        4,
+        2,
+        "canPay(17): false (ready turn = 17)"
+      ],
+      [
+        "band",
+        "End of turn 18 | Only the first guest is eligible"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "finishTurn()"
+      ],
+      [
+        "msg",
+        1,
+        3,
+        "finishEating(18): READY_TO_PAY"
+      ],
+      [
+        "msg",
+        1,
+        4,
+        "collectOldestEligible(state, 18)"
+      ],
+      [
+        "msg",
+        4,
+        2,
+        "canPay(18): true (17 < 18)"
+      ],
+      [
+        "msg",
+        4,
+        3,
+        "canPay(18): false (18 is not < 18)"
+      ],
+      [
+        "msg",
+        4,
+        5,
+        "recordPayment(first guest, order, 18)"
+      ],
+      [
+        "note",
+        "GameState creates Receipt(customer ID, locked cents, satisfaction, turn 18)."
+      ],
+      [
+        "msg",
+        5,
+        2,
+        "pay(18): PAID"
+      ],
+      [
+        "msg",
+        5,
+        6,
+        "order.pay(); table.release()"
+      ],
+      [
+        "band",
+        "After turn 18 | Fixed end-of-game evaluation"
+      ],
+      [
+        "msg",
+        0,
+        1,
+        "getResult()"
+      ],
+      [
+        "msg",
+        1,
+        7,
+        "new GameResult(state)"
+      ],
+      [
+        "note",
+        "Check paid >= 4 AND revenue >= $45.00 AND average paid satisfaction >= 60."
+      ],
+      [
+        "note",
+        "Combo first: $39.48 + $24.30 = $63.78; paid 4; average 80.00; VICTORY."
+      ],
+      [
+        "note",
+        "Salad first: $39.48 + $9.00 = $48.48; paid 4; average 86.00; VICTORY."
+      ]
+    ]
+  }
+]
