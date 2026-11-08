@@ -4,6 +4,8 @@ An offline Java 17 command-line restaurant management game for SC2002.
 
 Repository: https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming
 
+Video supporting files: [video-resources](video-resources/README.md) contains the segment index, runnable source copies, turn-13 Strategy A/B replays, Stage 3 class diagram, Customer 4 sequence diagram and cover images.
+
 ## Video reference files
 
 [Open the video reference folder](video-resources/README.md) for the recording scripts, runnable source, replay inputs, diagrams and cover images. The index distinguishes the original turn-13 Strategy A/B comparison from the alternative turn-16 scenario and provides reproduction commands and expected results.

@@ -1,8 +1,8 @@
 # Restaurant Rush video reference files
 
-This folder contains the source code, recording scripts, replay inputs, diagrams and cover images referenced by the group video. Start with the **original turn-13 comparison** if the video shows the Waiter choosing between serving customer 4 and taking customer 5's order.
+This folder is the single entry point for the submitted video's source code, replay inputs, diagrams and cover images. **Segment 2 uses the original turn-13 comparison; the other segments follow the later recording script.** The selected reference script is [final-video.md](scripts/final-video.md).
 
-本文件夹是视频配套资料入口。若视频讲的是第 13 回合“先上菜还是先接单”，请使用下方 Original / Turn 13 的资料。第 16 回合“先上套餐还是沙拉”是另一组案例，不要混用输入、结果或顺序图。
+本文件夹是视频配套资料统一入口：Segment 2 为旧版第 13 回合“先上菜还是先接单”；其余段落按新版。Segment 7 展示 Stage 3 类图和 Customer 4 的顺序图（分为三张连续图）。下方第 16 回合资料仅作为历史备选保留，不属于本视频的案例。
 
 ## Quick links by video segment
 
@@ -10,11 +10,11 @@ This folder contains the source code, recording scripts, replay inputs, diagrams
 | --- | --- |
 | 1. Launching the project | [Stage 1 instructions](stage-1/README.md), [Windows launcher](stage-1/run.ps1), [Main.java](stage-1/src/restaurantrush/Main.java) |
 | 2. Original turn-13 manager choice | [Strategy A: serve customer 4 first](stage-3/examples/victory.txt), [Strategy B: order for customer 5 first](video-demo/inputs/strategy-b.txt) |
-| 3. READY to service and payment | [Order](stage-3/src/restaurantrush/Order.java), [Customer](stage-3/src/restaurantrush/Customer.java), [Waiter](stage-3/src/restaurantrush/Waiter.java), [Chef](stage-3/src/restaurantrush/Chef.java), [Cashier](stage-3/src/restaurantrush/Cashier.java) |
-| 4. VIP and Critic behaviour | [Stage 2 replay](stage-2/examples/victory.txt), [VIPCustomer](stage-2/src/restaurantrush/VIPCustomer.java), [CriticCustomer](stage-2/src/restaurantrush/CriticCustomer.java), [Customer](stage-2/src/restaurantrush/Customer.java) |
-| 5. Stage 3 additions | [Host](stage-3/src/restaurantrush/Host.java), [ComboMeal](stage-3/src/restaurantrush/ComboMeal.java), [HappyHourPolicy](stage-3/src/restaurantrush/HappyHourPolicy.java), [GameState](stage-3/src/restaurantrush/GameState.java), [GameEngine](stage-3/src/restaurantrush/GameEngine.java), [Happy Hour demonstration input](video-demo/inputs/happy-hour.txt) |
-| 6. Victory and defeat | [Stage 1 victory](stage-1/examples/victory.txt), [Stage 1 defeat](stage-1/examples/defeat.txt), [Stage 3 victory](stage-3/examples/victory.txt), [Stage 3 defeat](stage-3/examples/defeat.txt) |
-| 7. Diagrams and design | [Class diagram](video-demo/assets/class-diagram.png), original sequence diagrams [A](video-demo/assets/sequence-a.png), [B](video-demo/assets/sequence-b.png), [C](video-demo/assets/sequence-c.png), [MenuItem](stage-3/src/restaurantrush/MenuItem.java), [ConsoleUI](stage-3/src/restaurantrush/ConsoleUI.java), [ConsoleView](stage-3/src/restaurantrush/ConsoleView.java) |
+| 3. Customer 1 Burger lifecycle, turns 1–4 | [Replay: first four turns](stage-3/examples/victory.txt), [Order](stage-3/src/restaurantrush/Order.java), [Customer](stage-3/src/restaurantrush/Customer.java), [Waiter](stage-3/src/restaurantrush/Waiter.java), [Chef](stage-3/src/restaurantrush/Chef.java), [Cashier](stage-3/src/restaurantrush/Cashier.java) |
+| 4. Stage 2 VIP behaviour | [Stage 2 replay: turns 4–6](stage-2/examples/victory.txt), [VIPCustomer](stage-2/src/restaurantrush/VIPCustomer.java), [Customer](stage-2/src/restaurantrush/Customer.java) |
+| 5. Host code explanation | [Host.seat](stage-3/src/restaurantrush/Host.java), [GameState.seat](stage-3/src/restaurantrush/GameState.java), [GameEngine.assignHost and assignWaiter](stage-3/src/restaurantrush/GameEngine.java) |
+| 6. Stage 3 victory and defeat | [Victory: also Strategy A](stage-3/examples/victory.txt), [Defeat](stage-3/examples/defeat.txt), [arrival rules](stage-3/src/restaurantrush/GameSetup.java), [meal choices](stage-3/src/restaurantrush/Menu.java), [Critic preference](stage-3/src/restaurantrush/CriticCustomer.java) |
+| 7. Stage 3 class diagram and Customer 4 sequence diagram | [Diagram guide and previews](video-demo/assets/README.md), [class diagram](video-demo/assets/class-diagram.png), Customer 4 sequence parts [A: preparation](video-demo/assets/sequence-a.png), [B: turn-13 decision](video-demo/assets/sequence-b.png), [C: payment and result](video-demo/assets/sequence-c.png) |
 
 ## Run the original turn-13 comparison
 
@@ -70,7 +70,7 @@ On macOS/Linux, replace `.\stage-N\run.ps1` with `sh stage-N/run.sh`, and `.\ver
 
 The Happy Hour input is a feature demonstration, not the victory strategy. Replay files supply ordinary commands through the same ConsoleUI as interactive play; they do not inject results.
 
-## Alternative turn-16 recording scenario
+## Archived alternative turn-16 scenario — not used in this video
 
 Use these files only if the video shows **two READY meals on turn 16** and compares which customer can pay before closing:
 
@@ -92,8 +92,9 @@ Matching sequence diagrams: [preparation](video-demo/assets/video-sequence-1.svg
 
 ## Recording scripts and covers
 
-- [Original recording script: turn-13 comparison](scripts/legacy-turn13.md)
-- [Alternative recording script: turn-16 comparison](scripts/alternative-turn16.md)
+- **[Selected video reference script: old Segment 2, newer other segments](scripts/final-video.md)**
+- [Archived original recording script](scripts/legacy-turn13.md)
+- [Archived alternative recording script](scripts/alternative-turn16.md)
 - [Relationship between the alternative scenario and the original report](scripts/REPORT_ALIGNMENT.md)
 - [4K 16:9 cover PNG](covers/restaurant-rush-cover-4k-16x9.png)
 - [Original-aspect-ratio cover PNG](covers/restaurant-rush-cover.png)
@@ -122,13 +123,15 @@ Validation before publication: all 368 regression assertions passed from this fo
 ```text
 video-resources/
   README.md                   Video evidence index and reproduction commands
-  scripts/                    Original and alternative recording scripts
+  scripts/final-video.md      Selected script matching the confirmed segment choices
+  scripts/                    Also retains earlier scripts as historical references
   stage-1/                    Runnable basic game, source, tests and examples
   stage-2/                    Runnable customer extension and examples
   stage-3/                    Runnable final game and examples
   video-demo/
     inputs/                   Additional comparison and promotion replays
-    assets/                   Class and sequence diagrams for both scenarios
+    assets/README.md          Selected Stage 3 class and Customer 4 sequence diagrams
+    assets/                   Selected diagrams and archived alternative diagrams
     Get-DemoCommands.ps1       Optional interactive command-copy helper
   covers/                     Cover PNGs, including 3840 x 2160
   verify.ps1                  Windows regression-suite launcher
