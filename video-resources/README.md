@@ -1,6 +1,6 @@
 # Restaurant Rush video reference files
 
-This folder is the single entry point for the submitted video's source code, replay inputs, diagrams and cover images. **Segment 2 uses the original turn-13 comparison; the other segments follow the later recording script.** The selected reference script is [final-video.md](scripts/final-video.md).
+This folder is the single entry point for the submitted video's source code, replay inputs and diagrams. **Segment 2 uses the original turn-13 comparison; the other segments follow the later recording plan.**
 
 本文件夹是视频配套资料统一入口：Segment 2 为旧版第 13 回合“先上菜还是先接单”；其余段落按新版。Segment 7 展示 Stage 3 类图和 Customer 4 的顺序图（分为三张连续图）。下方第 16 回合资料仅作为历史备选保留，不属于本视频的案例。
 
@@ -90,17 +90,9 @@ All three produce VICTORY. The service-order branches share turns 1–15; only t
 
 Matching sequence diagrams: [preparation](video-demo/assets/video-sequence-1.svg), [service decision](video-demo/assets/video-sequence-2.svg), [payment and result](video-demo/assets/video-sequence-3.svg). PNG copies and [diagram source data](video-demo/assets/video-sequence-source.json) are in the same directory.
 
-## Recording scripts and covers
+## Interactive replay preparation
 
-- **[Selected video reference script: old Segment 2, newer other segments](scripts/final-video.md)**
-- [Archived original recording script](scripts/legacy-turn13.md)
-- [Archived alternative recording script](scripts/alternative-turn16.md)
-- [Relationship between the alternative scenario and the original report](scripts/REPORT_ALIGNMENT.md)
-- [4K 16:9 cover PNG](covers/restaurant-rush-cover-4k-16x9.png)
-- [Original-aspect-ratio cover PNG](covers/restaurant-rush-cover.png)
-- [Optional command-copy helper for the original script](video-demo/Get-DemoCommands.ps1)
-
-The scripts retain the proposed recording sequence and timings; these are not confirmed timestamps for the final video. Execute their commands from this folder. The cover images retain the provided cover wording. Original report diagrams are preserved at their supplied resolution; the video/report submission is separate from this reference folder.
+The [optional command-copy helper](video-demo/Get-DemoCommands.ps1) copies selected replay turns for interactive demonstration. Run it from this folder. Original report diagrams are preserved at their supplied resolution; the video/report submission is separate from this reference folder.
 
 ## Source and development history
 
@@ -123,8 +115,6 @@ Validation before publication: all 368 regression assertions passed from this fo
 ```text
 video-resources/
   README.md                   Video evidence index and reproduction commands
-  scripts/final-video.md      Selected script matching the confirmed segment choices
-  scripts/                    Also retains earlier scripts as historical references
   stage-1/                    Runnable basic game, source, tests and examples
   stage-2/                    Runnable customer extension and examples
   stage-3/                    Runnable final game and examples
@@ -133,7 +123,6 @@ video-resources/
     assets/README.md          Selected Stage 3 class and Customer 4 sequence diagrams
     assets/                   Selected diagrams and archived alternative diagrams
     Get-DemoCommands.ps1       Optional interactive command-copy helper
-  covers/                     Cover PNGs, including 3840 x 2160
   verify.ps1                  Windows regression-suite launcher
   verify.sh                   macOS/Linux regression-suite launcher
 ```
