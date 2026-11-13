@@ -4,6 +4,22 @@ An offline Java 17 command-line restaurant management game for SC2002.
 
 Repository: https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming
 
+## Project evidence links
+
+- [Repository and source code](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming)
+- [Build and run instructions](#build-and-play)
+- [Stage 1 runnable tag](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/tree/stage-1)
+- [Stage 2 runnable tag](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/tree/stage-2)
+- [Stage 3 runnable tag](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/tree/stage-3)
+- [Stage 1 to Stage 2 comparison](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/compare/stage-1...stage-2) and [change analysis](#stage-1-to-stage-2)
+- [Stage 2 to Stage 3 comparison](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/compare/stage-2...stage-3) and [change analysis](#stage-2-to-stage-3)
+- [Stage 1, Stage 2 and Stage 3 class diagrams (PDF)](Diagrams/Stage_1_2_3_Class_Diagrams.pdf)
+- [Stage 3 sequence diagram (PDF)](Diagrams/Stage_3_Sequence_Diagram.pdf)
+- [Recorded presentation (MP4)](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/releases/download/demo-video-final/Demo-Video-High-Quality.mp4)
+- [Seven required video segments and timestamps](#recorded-demonstration)
+- [Each member's AI-history branch and Stage 1-3 conversations](#individual-ai-conversation-histories)
+- [Replay results](#rules-and-reproducibility) and verification scripts for [Windows](verify.ps1) / [macOS and Linux](verify.sh)
+
 ## Recorded demonstration
 
 Play the full demonstration directly in the video player below.
@@ -106,16 +122,16 @@ are implemented for this game's commands and state.
 
 | Folder | Git tag | Features | Behavioural assertions |
 | --- | --- | --- | ---: |
-| [stage-1](stage-1/README.md) | `stage-1` | Complete basic game with Regular customers | 99 |
-| [stage-2](stage-2/README.md) | `stage-2` | Adds VIP and Critic behaviours | 110 |
-| [stage-3](stage-3/README.md) | `stage-3` | Adds Host, ComboMeal and Happy Hour | 159 |
+| [stage-1](stage-1/README.md) | [stage-1](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/tree/stage-1) | Complete basic game with Regular customers | 99 |
+| [stage-2](stage-2/README.md) | [stage-2](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/tree/stage-2) | Adds VIP and Critic behaviours | 110 |
+| [stage-3](stage-3/README.md) | [stage-3](https://github.com/DasbootU9607/SC2002-Object-Oriented-Design-and-Programming/tree/stage-3) | Adds Host, ComboMeal and Happy Hour | 159 |
 
 Every folder contains `src/restaurantrush`, `test/restaurantrush`, `examples`,
 and its own build/run/test scripts. Repeated source files are intentional: stages do not depend on each other.
 
 The tags are successive real development snapshots. The first tag contains only Stage 1;
 the second adds Stage 2; the third adds Stage 3. To inspect a historical snapshot,
-use a separate checkout or `git switch --detach stage-1`; return with `git switch main`.
+use a separate checkout or `git switch --detach refs/tags/stage-1`; return with `git switch main`.
 
 ## Rules and reproducibility
 
@@ -131,10 +147,10 @@ GUI, networking, multiplayer and persistent save/load are outside the mandatory 
 
 | Replay | Paid | Served | Revenue | Paid satisfaction average | Outcome |
 | --- | ---: | ---: | ---: | ---: | --- |
-| Stage 1 victory | 5 | 5 | $66.00 | 79.20 | VICTORY |
-| Stage 2 victory | 5 | 5 | $65.10 | 78.00 | VICTORY |
-| Stage 3 victory | 5 | 6 | $72.78 | 85.60 | VICTORY |
-| Each stage defeat | 0 | 0 | $0.00 | N/A | DEFEAT |
+| [Stage 1 victory](stage-1/examples/victory.txt) | 5 | 5 | $66.00 | 79.20 | VICTORY |
+| [Stage 2 victory](stage-2/examples/victory.txt) | 5 | 5 | $65.10 | 78.00 | VICTORY |
+| [Stage 3 victory](stage-3/examples/victory.txt) | 5 | 6 | $72.78 | 85.60 | VICTORY |
+| Defeat: [Stage 1](stage-1/examples/defeat.txt), [Stage 2](stage-2/examples/defeat.txt), [Stage 3](stage-3/examples/defeat.txt) | 0 | 0 | $0.00 | N/A | DEFEAT |
 
 Every supplied replay runs all 18 turns. The Stage 3 victory activates Happy Hour on turn 4,
 processes a VIP order at the promotional price, prepares a three-unit combo,
